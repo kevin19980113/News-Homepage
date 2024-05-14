@@ -1,0 +1,61 @@
+.article {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.content {
+  display: flex;
+  gap: 1rem;
+}
+
+.head {
+  width: 50%;
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+.paragraph {
+  width: 50%;
+  line-height: 2;
+  color: var(--darkblue-color);
+}
+
+.paragraph button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #f4512c;
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 2rem;
+  letter-spacing: 0.25rem;
+  transition: background-color 0.3s ease-in;
+}
+
+.paragraph button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1240px) {
+  .article {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .head {
+    width: 100%;
+    font-size: 3rem;
+  }
+  .paragraph {
+    width: 100%;
+    color: var(--darkblue-color);
+  }
+}

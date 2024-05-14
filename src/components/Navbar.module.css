@@ -1,0 +1,127 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: hsl(233, 8%, 79%);
+  z-index: 100;
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.5);
+  padding: 0 3rem;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  height: var(--header-height);
+}
+
+.nav a {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: var(--grey-color);
+  transition: all 0.3s ease-in;
+}
+
+.navItem a:hover {
+  color: var(--orange-color);
+}
+
+.underLine {
+  display: inline-block;
+}
+
+.underLine::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: var(--orange-color);
+  transition: 0.3s ease-in;
+}
+
+.underLine:hover::after {
+  width: 100%;
+}
+
+.navClose {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.navToggle {
+  position: relative;
+  z-index: 1;
+}
+
+.navToggle button,
+.navClose button {
+  width: 25px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navToggle button:hover,
+.navClose button:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 1240px) {
+  .header {
+    padding: 0 1rem;
+  }
+
+  .nav {
+    margin: 1rem 1rem;
+  }
+
+  .navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--darkgrey-color);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    width: 45%;
+    height: 100%;
+    padding: 6rem 3rem 0;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  .showMenu {
+    right: 0;
+  }
+
+  .navItem a {
+    color: black;
+  }
+
+  .navList {
+    flex-direction: column;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .navToggle,
+  .navClose {
+    display: none;
+  }
+}

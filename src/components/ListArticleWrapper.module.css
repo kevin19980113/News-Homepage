@@ -1,0 +1,47 @@
+.article {
+  width: 35%;
+  background-color: #111216;
+  padding: 2rem;
+}
+
+.article h1 {
+  color: var(--orange-color);
+  font-size: 2rem;
+}
+
+.articleList {
+  list-style: none;
+}
+
+.articleItem {
+  padding: 1rem 0;
+}
+
+.articleItem a {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+}
+
+.articleItem a:hover {
+  color: var(--orange-color);
+  transition: color 0.3s ease-in;
+}
+
+.articleItem p {
+  margin-top: 0.7rem;
+  color: #c0b8b8;
+}
+
+.articleList hr {
+  margin: 1.5rem 0;
+  border: 1px solid white;
+  border-bottom: 0;
+}
+
+@media screen and (max-width: 1240px) {
+  .article {
+    width: 100%;
+  }
+}
